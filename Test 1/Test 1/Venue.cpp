@@ -13,7 +13,7 @@ bool Venue::validTime(int time)
 {
 	for (int i = 0; i < scheduledEvents.size(); i++)
 	{
-		if (scheduledEvents[i] != time)
+		if (scheduledEvents[i] == time)
 			return true;
 		else
 			return false;
@@ -23,11 +23,12 @@ bool Venue::validTime(int time)
 //adds an event to the list 
 void Venue::addEvent(int time, string name)
 {
+	//checks to see if time is already taken
 	if (validTime(time) == true)
 	{
-		//creates placeholder variable
+		//creates placeholder variable to store data
 		Event newEvent(time, name);
-		//adds value to scheduledEvents vector
+		//adds value to scheduledEvents vect
 		scheduledEvents[time] = newEvent;
 	}
 }
@@ -35,7 +36,8 @@ void Venue::addEvent(int time, string name)
 //finds an event through the time
 Event findEvent(int time)
 {
-	
+	if (getTime() == time)
+		cout 
 }
 
 //finds an event through the name

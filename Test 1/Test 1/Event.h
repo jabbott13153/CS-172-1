@@ -2,6 +2,9 @@
 Julia Abbott, and that any help I received adhered to the rules stated for this exam. */
 
 #include<string>
+#include<vector>
+
+using namespace std;
 
 #ifndef _EVENT_H_
 #define _EVENT_H_

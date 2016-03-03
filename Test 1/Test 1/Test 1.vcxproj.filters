@@ -21,6 +21,9 @@
     <ClCompile Include="Event.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Venue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Venue.h">

@@ -4,6 +4,8 @@ Julia Abbott, and that any help I received adhered to the rules stated for this 
 #include<string>
 #include"Event.h"
 
+using namespace std;
+
 void Event::setTime(int t)
 {
 	Time = t;

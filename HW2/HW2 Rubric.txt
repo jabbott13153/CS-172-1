@@ -18,15 +18,15 @@
 
 
 EX02_01:
-		UML=========== Couldn't find UML
+		UML===========
 		Fan Object==== 
 		Test Program== 
 EX02_02:
-		UML=========== Couldn't find UML
+		UML===========
 		Object======== 
 		Test Program== 
 EX02_03: 
-		UML=========== Couldn't find UML
+		UML===========
 		Object======== 
 		Test Program== 
 */

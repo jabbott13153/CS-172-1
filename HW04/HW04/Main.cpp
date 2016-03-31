@@ -1,8 +1,12 @@
 #include<iostream>
+
 using namespace std;
 
 int* ex01_part_1(int Size);
 int ex01_part2(int*, int);
+
+//ex02 
+int* doubleCapacity(const int*, int size);
 
 int main()
 {
@@ -72,4 +76,10 @@ int ex01_part2(int* new_array, int size)
 	}
 
 	return tally;
+}
+
+//creates a new array with double the capacity of the list variable
+int* doubleCapacity(const int* List, int size)
+{
+
 }

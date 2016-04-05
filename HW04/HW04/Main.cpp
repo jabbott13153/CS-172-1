@@ -81,5 +81,9 @@ int ex01_part2(int* new_array, int size)
 //creates a new array with double the capacity of the list variable
 int* doubleCapacity(const int* List, int size)
 {
+	int *newArray = new int[size * 2];
+	for (int i = 0; i < size * 2; i++)
+	{
 
+	}
 }

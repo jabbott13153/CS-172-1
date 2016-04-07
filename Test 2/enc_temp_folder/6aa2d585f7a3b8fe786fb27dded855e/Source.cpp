@@ -93,7 +93,7 @@ int** fillArray(unsigned int numRows, unsigned int numCols)
 		int* alloc_array = newPointerArray[i];
 		
 		//assigning the row of ints to the current row of the array
-		My2DArray[i] = alloc_array; // <-currently wrong
+		//My2DArray[i] = alloc_array;
 	
 
 		//The code below reads a number into each location in the 2D array.

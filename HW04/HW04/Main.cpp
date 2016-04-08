@@ -8,18 +8,27 @@ int ex01_part2(int*, int);
 //ex02 
 int* doubleCapacity(const int*, int size);
 
+//ex03
+int smallestElement(int[], int);
+
+//ex04
+
 int main()
 {
 
 	//create variable so user can input an integer into the ex01_part_1 function
 	int size_of_array = 0;
-	
-//prompt user to enter a number, then input number into function
+
+	//prompt user to enter a number, then input number into function
 	cout << "Please enter the size of the new array: \n";
 	cin >> size_of_array;
 
 	//int* array = ex01_part_1(size_of_array);
 	cout << "The amount of numbers above the average is: " << ex01_part2(ex01_part_1(size_of_array), size_of_array) << endl;
+
+	//testing ex03
+	int testArray[] = { 1,2,4,5,10,100,2,-22 };
+	cout << "The smallest element is: " << smallestElement(testArray, 8) << endl;
 	return 0;
 }
 
@@ -40,7 +49,7 @@ int* ex01_part_1(int Size)
 	//initialize the array
 	for (int i = 0; i < Size; i++)
 	{
-		
+
 		cout << "Please enter an integer: " << endl;
 		cin >> *number;
 		newArray[i] = *number;
@@ -61,7 +70,7 @@ int ex01_part2(int* new_array, int size)
 	int average = 0;
 	//creates variable to store amount of numbers above the average
 	int tally = 0;
-//finds average
+	//finds average
 	for (int i = 0; i < size; i++)
 	{
 		average += new_array[i];
@@ -72,7 +81,7 @@ int ex01_part2(int* new_array, int size)
 	for (int i = 0; i < size; i++)
 	{
 		if (new_array[i] > average)
-			tally++;			
+			tally++;
 	}
 
 	return tally;
@@ -81,9 +90,27 @@ int ex01_part2(int* new_array, int size)
 //creates a new array with double the capacity of the list variable
 int* doubleCapacity(const int* List, int size)
 {
-	int *newArray = new int[size * 2];
-	for (int i = 0; i < size * 2; i++)
+	int* NewArray = new int[size * 2];
+	for (int i = 0; i < size; i++)
 	{
-
+		NewArray[i] = List[i];
 	}
+	return NewArray;
+}
+
+//takes an array of integers, and returns the smallest
+int smallestElement(int list[], int size)
+{
+	int* Smallest = NULL;
+	int smallest = list[0];
+	//Smallest = smallest;
+	for (int i = 0; i < size; i++)
+	{
+		if (list[i] < smallest)
+		{
+			int temp = list[i];
+			smallest = temp;
+		}
+	}
+	return smallest;
 }

@@ -73,32 +73,42 @@ int** fillArray(unsigned int numRows, unsigned int numCols)
 	//pointer to a pointer
 	int** My2DArray; // This will hold the array! Don't change this line.
 
-	//Dynamically allocate an array of pointers to ints. Hint: You can dynamically
-	//allocate the array by saying you want a new int*[<size>], where
-	//<size> is the number of rows in this case.
-										//<=== PUT YOUR CODE HERE!
+					 //Dynamically allocate an array of pointers to ints. Hint: You can dynamically
+					 //allocate the array by saying you want a new int*[<size>], where
+					 //<size> is the number of rows in this case.
+	int** newPointerArray1 = new int*[numRows];	//<=== PUT YOUR CODE HERE!
+	
+												//holds an array of ints
+												//is a pointer that points to an array of ints
 
-	//holds an array of ints
-	//is a pointer that points to an array of ints
-	int** newPointerArray = new int*[numRows];
 
-	//Allocates an array of integers to each row. (This creates the columns!)
-	//You fill in the blanks.
+												//Allocates an array of integers to each row. (This creates the columns!)
+												//You fill in the blanks.
+
+
 	for (int i = 0; i < numRows; i++) {
+
 		//Under this comment put a line of code to 1) allocate the array of ints
 		//and 2) assign it to the current row of your array.
-										//<=== PUT YOUR CODE HERE!
+
+		//<=== PUT YOUR CODE HERE!
+		int* newArray = new int[numRows];
+		newArray[i] = i;
+
+		newPointerArray1[i] = newArray;
+
+		My2DArray = newPointerArray1;
 
 		//allocating the int** array to an int* array
-		int* alloc_array = newPointerArray[i];
-		
 		//assigning the row of ints to the current row of the array
-		My2DArray[i] = alloc_array; // <-currently wrong
-	
+		/*newPointerArray1[i] = &i;
+		My2DArray = &newPointerArray1[i];*/
 
-		//The code below reads a number into each location in the 2D array.
+
+
+		//The code below reads a number into each location in the 2D array.*/
 		for (int j = 0; j < numCols; j++) {
-			int i = 0;
+
 			cout << "Number at position " << i << "," << j << "? ";
 			cin >> My2DArray[i][j];
 		}
@@ -118,9 +128,9 @@ void deleteArray(int** A, int size)
 	//then you can delete the whole.
 	//YOUR CODE GOES HERE
 
-	for (int i = 0; i <= size; i++)
+	for (int i = 0; i < size; i++)
 	{
-		delete [] A;
+		delete[] A[i];
 	}
-	delete [] A;
+	delete[] A;
 }

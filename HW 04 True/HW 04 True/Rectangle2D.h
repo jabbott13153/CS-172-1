@@ -1,4 +1,4 @@
-/*
+
 
 #ifndef Rectange_h_
 #define Rectange_h_
@@ -34,11 +34,11 @@ public:
 		length = new_length;
 	}
 
-	double getX()
+	double getX() const
 	{
 		return x;
 	}
-	double getY()
+	double getY() const
 	{
 		return y;
 	}
@@ -47,12 +47,12 @@ public:
 	//changes y value
 	void setY(double);
 	//returns area of the rectangle
-	double getArea(double, double);
+	double getArea(double, double) const;
 	//returns perimiter of rectanlge
 	double getPerimeter(double, double);
 
-	double getWidth();
-	double getLength();
+	double getWidth() const;
+	double getLength() const;
 	//returns true if an x,y point is within the rectange
 	const bool contains(double, double);
 	//returns true if one rectangle is contained within a second rectangle
@@ -63,4 +63,3 @@ public:
 
 
 #endif;
-*/

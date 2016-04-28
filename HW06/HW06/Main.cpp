@@ -66,12 +66,12 @@ J linear_search(const J list[], J key, int array_size)
 	{
 		if (key == list[i])
 		{
-			return list[i];
+			return list[i];                               // Joseph: I think it wants to know where in the array the object is, not the object there.
 		}
 	} 
 		cout << "There is no match for " << key << " .\n";
 		
-
+		// Joseph: And it need to return something even if it doesn't find it
 }
 
 //creates a function that returns true if function is sorted

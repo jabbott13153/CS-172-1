@@ -1,0 +1,8 @@
+EX05_01: 
+EX05_02: 
+EX05_03: 
+EX05_04: -5   The code looks good except for some weird pointer errors.
+EX05_05: 
+
+Notes: 
+- great comments. 

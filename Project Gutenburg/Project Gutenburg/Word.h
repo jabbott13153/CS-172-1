@@ -15,7 +15,19 @@ private:
 	string Type;
 	unsigned int Frequency;
 
-
+	
+	
+public:
+	//create constructor
+	Word(string);
+	//create default constructor
+	Word() {};
+	string getType() { return Type; };
+	unsigned int getFrequency() { return Frequency; };
+	void setFrequency(unsigned int freq)
+	{
+		Frequency = freq;
+	};
 };
 
 #endif
